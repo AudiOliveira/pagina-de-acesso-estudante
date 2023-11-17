@@ -291,7 +291,6 @@ h2 {
     margin-bottom: 10px;
 }
 #button2 {
-    background-image: url('login-bg.jpg'); /* Mantém o background image no button2 */
     background-size: 100% 100%; /* Imagem 100% na div */
     background-repeat: no-repeat;
     margin-left: 25px;
