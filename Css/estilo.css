@@ -1,10 +1,34 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    justify-content: flex-start;
+/* IMPORTAÇÃO DE FONTE */
+@font-face {
+    font-family: 'Bebas Neue Light';
+    src: url('BebasNeue-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
-
+/* BODY PADRÃO, NÃO ALTERAR! */
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        justify-content: flex-start;
+}
+/* MENSAGEM DE HOVER PARA IMAGEM DE PERFIL */
+.overlay-message {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+#imagem:hover .overlay-message {
+    opacity: 1;
+}
+/* HEADER PADRÃO, CASO QUEIRA, COPIE, MAS NÃO ALTERE! */
 header {
     background: linear-gradient(to right, #008442, #00511C);
     color: #fff;
@@ -12,7 +36,7 @@ header {
     text-align: center;
     position: relative;
 }
-
+/* BOTÃO DE VOLTAR: */
 #backButton {
     position: absolute;
     left: 15px;
@@ -23,13 +47,12 @@ header {
     font-size: 20px;
     transform: translateY(-50%);
 }
-
+/* DIV COM LOGO E NOMENCLATURA DA INSTITUIÇÃO */
 #logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 #logo {
     margin-right: 10px;
 }
@@ -37,20 +60,20 @@ header {
 #title-container {
     text-align: left;
 }
-
 h2 {
     margin: 0;
     font-family: 'Bebas Neue Light', sans-serif;
     font-size: 35px;
 }
 
+/* COMPLEMENTO LINHA AMARELA ABAIXO DO HEADER */
 .yellow-stripe {
     background-color: #FFD700;
     height: 5px;
     width: 100%;
 }
 
-/* Adição de estilos melhorados para a div da data e os botões */
+/* DIV DOS BUTÕES E DA DATA: */
 #buttons-and-date-container {
     position: fixed;
     top: 50%;
@@ -62,7 +85,6 @@ h2 {
     padding: 20px;
     z-index: 2;
 }
-
 .date-container {
     width: 90%;
     height: 100px;
@@ -75,23 +97,19 @@ h2 {
     margin-bottom: 50px;
     padding: 0 10px;
 }
-
 .date-text {
     font-size: 25pt;
 }
-
 .calendar-icon {
     font-size: 30px;
     margin-left: 10px;
     margin-bottom: 50px;
 }
-
 #buttons-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-
 .button {
     width: 200px;
     height: 130px;
@@ -103,35 +121,29 @@ h2 {
     margin-bottom: 15px;
     background-color: #BCF6F4; /* Nova cor de fundo para o button1 */
 }
-
 .button img {
     width: 90%;
     object-fit: cover;
     border-radius: 12px; /* Mantém o mesmo raio de borda do botão */
 }
-
 #sisedu {
     margin-right: 5px;
     margin-bottom: 10px;
 }
-
 #button2 {
-    background-image: url('login-bg.jpg'); /* Mantém o background image no button2 */
+    background-image: url('./imgs/bg-ao.jpg'); /* Mantém o background image no button2 */
     background-size: 100% 100%; /* Imagem 100% na div */
     background-repeat: no-repeat;
 }
-
 .button:hover {
     transform: translateY(-4px);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
 }
-
 .button:active {
     transform: translateY(4px);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
 }
-
-/* Estilos para a seção do perfil */
+/* SESSÃO DE PERFIL */
 #profile-section {
     justify-content: left;
     margin: 20px;
@@ -141,12 +153,10 @@ h2 {
     margin-left: 3%;
     margin-top: 5%;
 }
-
 #profile-info {
     display: block;
     margin-top: 10%;
 }
-
 #profile-info img {
     border-radius: 50%;
     margin-right: 20px;
@@ -154,37 +164,18 @@ h2 {
     height: 20%;
     margin-bottom: 30px;
 }
-
 #profile-details {
     width: 100%;
 }
-
 #profile-details h3 {
     margin: 0;
     font-size: 24px;
 }
-
 #profile-details p {
     margin: 5px 0;
     font-size: 16px;
 }
-#imagem:hover {
-    transition: 0.5s;
-    filter: brightness(70%);
-    cursor: pointer;
-}
-.overlay-message {
-position: absolute;
-color: #fff;
-font-size: 16px;
-text-align: center;
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.3s ease;
-}
-#imagem:hover .overlay-message {
-opacity: 1;
-}
+/* SESSÃO DE NOTIFICAÇÕES: */
 #notification-section {
     position: fixed;
     top: 50%;
@@ -207,13 +198,11 @@ opacity: 1;
   width: 95%;
   height: 350px;
   overflow-y: auto;
-    
 }
 #notification-title h3{
   margin-top: -5px;
   font-size: 150%;
 }
-
 .notification-card {
     background-color: #FFD7E3;
     border: 1px solid #ddd;
@@ -221,17 +210,15 @@ opacity: 1;
     margin-bottom: 15px;
     padding: 20px;
 }
-
 .notification-card h4 {
     margin: 0;
     font-size: 18px;
 }
-
 .notification-card p {
     margin: 5px 0;
     font-size: 14px;
 }
-/* Adição de uma divisão de linha vertical */
+/* LINHA VERTICAL, COMPLEMENTO. */
 #vertical-line {
     position: fixed;
     top: 15%;
@@ -245,6 +232,7 @@ opacity: 1;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+/* RESPONSIVIDADE 1000PX */
 @media (max-width: 1000px) {
     /* Adição de estilos melhorados para a div da data e os botões */
 #buttons-and-date-container {
@@ -258,7 +246,6 @@ opacity: 1;
     z-index: 2;
     justify-content: center;
 }
-
 .date-container {
     width: 90%;
     height: 100px;
@@ -271,23 +258,19 @@ opacity: 1;
     margin-bottom: 50px;
     padding: 0 10px;
 }
-
 .date-text {
     font-size: 25pt;
 }
-
 .calendar-icon {
     font-size: 30px;
     margin-left: 10px;
     margin-bottom: 50px;
 }
-
 #buttons-container {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
-
 .button {
     width: 250px;
     height: 150px;
@@ -298,35 +281,29 @@ opacity: 1;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 1);
     background-color: #BCF6F4; /* Nova cor de fundo para o button1 */
 }
-
 .button img {
     width: 90%;
     object-fit: cover;
     border-radius: 12px; /* Mantém o mesmo raio de borda do botão */
 }
-
 #sisedu {
     margin-right: 5px;
     margin-bottom: 10px;
 }
-
 #button2 {
     background-image: url('login-bg.jpg'); /* Mantém o background image no button2 */
     background-size: 100% 100%; /* Imagem 100% na div */
     background-repeat: no-repeat;
     margin-left: 25px;
 }
-
 .button:hover {
     transform: translateY(-4px);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
 }
-
 .button:active {
     transform: translateY(4px);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8);
 }
-
 /* Estilos para a seção do perfil */
 #profile-section {
   justify-content: center;
@@ -337,12 +314,10 @@ opacity: 1;
     margin-left: 20%;
     left: 50%;
 }
-
 #profile-info {
     display: flex;
     margin-top: 10%;
 }
-
 #profile-info img {
     border-radius: 50%;
     margin-right: 20px;
@@ -350,17 +325,14 @@ opacity: 1;
     height: 20%;
     margin-bottom: 30px;
 }
-
 #profile-details {
     width: 100%;
 }
-
 #profile-details h3 {
     margin: 0;
     margin-top: 15%;
     font-size: 24px;
 }
-
 #profile-details p {
     margin: 5px 0;
     font-size: 16px;
@@ -393,7 +365,6 @@ opacity: 1;
   margin-top: -5px;
   font-size: 150%;
 }
-
 .notification-card {
     background-color: #FFD7E3;
     border: 1px solid #ddd;
@@ -401,12 +372,10 @@ opacity: 1;
     margin-bottom: 15px;
     padding: 20px;
 }
-
 .notification-card h4 {
     margin: 0;
     font-size: 18px;
 }
-
 .notification-card p {
     margin: 5px 0;
     font-size: 14px;
@@ -416,13 +385,14 @@ opacity: 1;
     display: none;
 }
 }
-
+/* RESPONSIVIDADE 610PX */
 @media (max-width: 610px) {
 .button {
     width: 200px;
     height: 120px;
 }
 }
+/* RESPONSIVIDADE 500PX */
 @media (max-width: 500px) {
 .button {
     width: 120px;
@@ -439,18 +409,10 @@ opacity: 1;
     margin-bottom: 30px;
 }
 #profile-section {
-    display: block;
     margin-left: 10%;
     width: 80%;
 }
+#profile-info {
+    display: block;
 }
-
-</style>
-<!-- Importação da fonte Bebas Neue Light -->
-<style>
-@font-face {
-    font-family: 'Bebas Neue Light';
-    src: url('BebasNeue-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
